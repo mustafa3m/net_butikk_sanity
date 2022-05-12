@@ -1,0 +1,7 @@
+*[_type == 'product'] {
+   ...,
+  
+   image {
+     asset->{url}
+   }
+}
