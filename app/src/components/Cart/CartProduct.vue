@@ -4,7 +4,7 @@
 
     <span class=""> Price {{ product.product.price }}</span>
 
-    <span @click="changeNumberOfUnits(product.product._id)" class=""
+    <span @click="changeNumberOfUnits(product.product)" class=""
       >quantity : {{ product.quantity }}</span
     >
     <button @click="deleteProduct(product.product._id)" class="marginleft">
@@ -40,8 +40,8 @@
 
         this.$store.commit("DELETE_PRODUCT");
       },
-      changeNumberOfUnits() {
-        this.$store.commit("CHANGE_NUMBER_OF_UNITS");
+      changeNumberOfUnits(product) {
+        this.$store.commit("CHANGE_NUMBER_OF_UNITS", product);
       },
     },
   };
@@ -51,7 +51,7 @@
   .product {
     display: flex;
     flex-direction: row;
-    gap: 5px;
+    gap: 10px;
     align-items: space-between;
     margin-bottom: 20px;
     padding: 10px;

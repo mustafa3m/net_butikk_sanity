@@ -9,6 +9,7 @@
         <h3>{{ result.name }}</h3>
         <p>{{ result.description }}</p>
         <p>{{ result.price }} €</p>
+        
         <button class="btn" @click="addProductToCart(result)">
           Add to cart
         </button>

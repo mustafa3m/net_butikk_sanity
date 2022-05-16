@@ -2,12 +2,12 @@
   <div>
     <h2>Order</h2>
     <CartProduct
-      v-for="(product,index) in cart"
+      v-for="(product, index) in cart"
       :key="index"
       :product="product"
     />
     <button @click="SubTotalItems(index)" class="btn btn-success">
-      Order {{ product }} €
+      Order {{ product }} € {{ totalPrice }}
     </button>
     <!-- product.product._id -->
   </div>
@@ -33,14 +33,14 @@
     computed: {
       ...mapState({
         cart: (state) => state.cart,
+        totalPrice: (state) => state.totalPrice,
       }), //RECUPERE LE STATE AVEC mapSTATE
     },
     methods: {
       SubTotalItems(product) {
-        console.log('Total product',product);
+        console.log("Total product", product);
         this.$store.commit("SUB_TOTAL_ITEMS");
       },
-      
     },
   };
 </script>
