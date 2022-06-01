@@ -12,7 +12,9 @@
 <script>
   import CartProduct from "./CartProduct.vue";
   export default {
+    
     props:{
+
       product: {
         type: Object,
         default: {}
