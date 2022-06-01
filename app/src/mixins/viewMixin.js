@@ -1,20 +1,24 @@
 import sanity from "../sanity.js";
 
 export default {
+
   data() {
     return {
       loading: true,
       results: null,
     };
+
   },
 
   methods: {
+
     async sanityFetch(query, params) {
       this.results = await sanity.fetch(query, params);
       this.loading = false;
     },
 
     metaTags(meta) {
+      
       const currentURL = window.location.origin + this.$route.path;
 
       if (meta.title) {

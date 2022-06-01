@@ -1,49 +1,56 @@
 <template>
+
   <header>
-    <router-link class="logo" to=""> Shahi /</router-link>
 
     <ul>
-      <li>
-        <router-link to="/home"> Tea</router-link>
-      </li>
 
-      <li>
-        <router-link to="/cart">Cart</router-link>
-      </li>
-      <li>
-        <router-link to="/footer">Our history</router-link>
-      </li>
+      <li ><img class="logo-image" src="images/tea-logo.webp" alt="image-logo" width="50px"></li>
+      <li><router-link :to="{ name: 'home' }">HOME</router-link></li>
+     
     </ul>
+
   </header>
+
 </template>
 
 <style scope>
   header {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+    
     background-image: url(../img/bg.jpg);
     background-repeat: no-repeat;
     background-position: center bottom;
     background-color: #96b011;
+    padding: 1rem;
     color: white;
+    width: 100%;
+    
   }
-  .logo{
-    font-weight: bold;
-    font-size: 30px;
-  }
+  
 
   ul {
-    
     display: flex;
     flex-direction: row;
-    flex: 1 1 auto;
-    justify-content: flex-end;
-    /* justify-content: center;
-    align-items: center; */
+    justify-content: space-between;
+    align-items:center;
     gap: 3rem;
   }
-  li{
+  li {
     margin-right: 10px;
+  }
+
+  .logo-image{ 
+     width: 80px;
+    margin: 0 auto;
+    height: auto;
+  }
+  @media screen and (max-width: 550px) {
+ 
+    header{
+      padding: 0;
+      width: 100vh;
+      
+    
+    }
+
   }
 </style>

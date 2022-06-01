@@ -1,16 +1,17 @@
 <template>
+
   <div class="productCart product">
-    <strong class="">{{ product.product.name }} </strong>
 
-    <span class=""> Price {{ product.product.price }}</span>
+    <strong >{{ product.product.name }} </strong>
 
-    <span @click="changeNumberOfUnits(product.product)" class=""
-      >quantity : {{ product.quantity }}</span
-    >
-    <button @click="deleteProduct(product.product._id)" class="marginleft">
-      Delete
-    </button>
+    <span > Price {{ product.product.price }}</span>
+
+    <span @click="changeNumberOfUnits(product.product)"> quantity  {{ product.quantity }}</span>
+
+    <button class=" product-margin product-button" @click="deleteProduct(product.product._id)" > * </button>
+
   </div>
+  
 </template>
 ;
 
@@ -30,13 +31,11 @@
         cart: (state) => state.cart,
       }), //RECUPERE LE STATE AVEC mapSTATE
     },
-    mounted() {
-      //console.log(this.product);
-    },
+  
     methods: {
       //delete
       deleteProduct(product) {
-        //console.log("DELETE", product);
+        
 
         this.$store.commit("DELETE_PRODUCT");
       },
@@ -50,25 +49,39 @@
 <style scoped>
   .product {
     display: flex;
-    flex-direction: row;
-    gap: 10px;
-    align-items: space-between;
-    margin-bottom: 20px;
-    padding: 10px;
+    gap:1rem;
+    
+  
   }
   strong {
-    flex: 1 1 auto;
+    font-size: 0.9rem;
+    flex: none;
+    
+   
   }
 
-  button {
-    background-color: red;
+ .product-button {
+  color: red; 
+  
   }
   .productCart {
-    border: var(--border);
-    border-radius: var(--border-radius);
-    background-color: var(--gray-1);
+  
+    max-width: 100%;
+    margin-bottom: 1rem;
+    margin-right: 3rem;
   }
-  .marginleft {
-    margin-left: 10px;
+  .product-margin {
+    margin-left: 5px;
   }
+
+    @media screen and (max-width: 550px) {
+      strong {
+        font-size: 0.8rem;
+        flex: none ;
+      }
+
+      .productCart{ 
+        margin-right: 3rem;
+      }
+    }
 </style>

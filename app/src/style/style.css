@@ -4,3 +4,10 @@ body {
 	font-size: var(--font-size);
 	font-family: var(--font-family);
 }
+
+/* class */
+.listing-product-image {
+    width: 50%;
+    margin: 0 auto;
+    height: auto;
+  }

@@ -1,8 +1,11 @@
 <template>
+
   <div>
+
     <CartProduct />
   
   </div>
+  
 </template>
 ;
 

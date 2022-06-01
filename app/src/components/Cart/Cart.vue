@@ -1,18 +1,23 @@
 <template>
-  <div>
+
+  <div class="order">
+
     <h2>Order</h2>
+
     <CartProduct
       v-for="(product, index) in cart"
       :key="index"
       :product="product"
     />
-    <button @click="SubTotalItems(index)" class="btn btn-success">
-      Order {{ product }} € {{ totalPrice }}
+
+    <button  @click="SubTotalItems(index)" class="btn btn-success ">
+      Order {{ SubTotalItems(index) }} {{ totalPrice }}  € 
     </button>
-    <!-- product.product._id -->
+    
   </div>
+
 </template>
-;
+
 
 <script>
   import CartProduct from "./CartProduct.vue";
@@ -26,15 +31,12 @@
         cartProducts: [],
       };
     },
-    mounted() {
-      /* console.log("cart ", this.$store.state.cart);
-      this.cartProducts = this.$store.state.cart; */
-    },
+
     computed: {
       ...mapState({
         cart: (state) => state.cart,
         totalPrice: (state) => state.totalPrice,
-      }), //RECUPERE LE STATE AVEC mapSTATE
+      }), 
     },
     methods: {
       SubTotalItems(product) {
@@ -46,10 +48,26 @@
 </script>
 
 <style scoped>
-  div {
+  .order {
     padding: 20px;
+     margin-top: 2rem;
   }
-  div h2 {
+  .order h2 {
     margin-bottom: 10px;
+  }
+  .btn-success{ 
+    background-color: var(--background-color);
+    margin-left : 0.5rem;
+  }
+
+  @media screen and (max-width: 550px) {
+     .order {
+    padding: 0px;
+    margin-top: 3rem;
+    margin-left: 3rem;
+    text-align: left;
+    
+  }
+
   }
 </style>
