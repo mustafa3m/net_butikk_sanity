@@ -4,7 +4,7 @@
 
     <ul>
 
-      <li><img class="logo-image" src="images/tea-logo.webp" alt="image-logo" width="50px"></li>
+      <li><img class="logo-image" src="/images/tea-logo.webp" alt="image-logo" width="50px"></li>
       <li><router-link :to="{ name: 'home' }">HOME</router-link></li>
      
     </ul>
