@@ -23,9 +23,11 @@
     height: 50px;
     padding: 2rem;
     
+    
   }
   footer p {
     text-align: center;
+    
   }
   @media screen and (max-width: 600px) {
  
