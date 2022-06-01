@@ -6,7 +6,7 @@
 
     <span > Price {{ product.product.price }}</span>
 
-    <span @click="changeNumberOfUnits(product.product)"> quantity  {{ product.quantity }}</span>
+    <span> quantity  {{ product.quantity }}</span>
 
     <button class=" product-margin product-button" @click="deleteProduct(product.product._id)" > * </button>
 
@@ -27,21 +27,20 @@
       },
     },
     computed: {
+      
       ...mapState({
         cart: (state) => state.cart,
-      }), //RECUPERE LE STATE AVEC mapSTATE
+      }), 
     },
   
     methods: {
-      //delete
-      deleteProduct(product) {
-        
 
+      // Slett produkter
+      deleteProduct(product) {
         this.$store.commit("DELETE_PRODUCT");
       },
-      changeNumberOfUnits(product) {
-        this.$store.commit("CHANGE_NUMBER_OF_UNITS", product);
-      },
+
+    
     },
   };
 </script>
@@ -61,7 +60,7 @@
   }
 
  .product-button {
-  color: red; 
+  color: var( --color-btn-red); 
   
   }
   .productCart {
@@ -74,7 +73,8 @@
     margin-left: 5px;
   }
 
-    @media screen and (max-width: 550px) {
+    @media screen and (max-width: 600px) {
+
       strong {
         font-size: 0.8rem;
         flex: none ;
