@@ -33,14 +33,15 @@
     },
 
     computed: {
+      
       ...mapState({
         cart: (state) => state.cart,
         totalPrice: (state) => state.totalPrice,
       }), 
     },
     methods: {
+
       SubTotalItems(product) {
-        console.log("Total product", product);
         this.$store.commit("SUB_TOTAL_ITEMS");
       },
     },
@@ -51,6 +52,7 @@
   .order {
     padding: 20px;
      margin-top: 2rem;
+     width: 100%;
   }
   .order h2 {
     margin-bottom: 10px;
@@ -60,7 +62,7 @@
     margin-left : 0.5rem;
   }
 
-  @media screen and (max-width: 550px) {
+  @media screen and (max-width: 600px) {
      .order {
     padding: 0px;
     margin-top: 3rem;
