@@ -27,7 +27,7 @@
   footer p {
     text-align: center;
   }
-  @media screen and (max-width: 550px) {
+  @media screen and (max-width: 600px) {
  
     footer {
      position: relative;
