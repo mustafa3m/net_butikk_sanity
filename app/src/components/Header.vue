@@ -4,7 +4,7 @@
 
     <ul>
 
-      <li ><img class="logo-image" src="images/tea-logo.webp" alt="image-logo" width="50px"></li>
+      <li><img class="logo-image" src="images/tea-logo.webp" alt="image-logo" width="50px"></li>
       <li><router-link :to="{ name: 'home' }">HOME</router-link></li>
      
     </ul>
@@ -15,13 +15,10 @@
 
 <style scope>
   header {
-    
-    background-image: url(../img/bg.jpg);
-    background-repeat: no-repeat;
-    background-position: center bottom;
-    background-color: #96b011;
+   
+    background-color: var(--background-color);
     padding: 1rem;
-    color: white;
+    color: var(white);
     width: 100%;
     
   }
@@ -43,7 +40,7 @@
     margin: 0 auto;
     height: auto;
   }
-  @media screen and (max-width: 550px) {
+  @media screen and (max-width: 600px) {
  
     header{
       padding: 0;
