@@ -3,35 +3,37 @@
   <Header />
 
   <main class="container">
+
     <div v-if="loading">...</div>
 
-    <section id="tea" v-else>
+    <div id="tea" v-else>
 
-      <div class="listing-product" v-for="result in results" :key="result._id">
+      <div class="listing-product" v-for="item in result" :key="item._id">
 
-        <h2 class="listing-product-title">{{ result.title }}</h2>
+        <h2 class="listing-product-title">{{item.title }}</h2>
 
         <img
           class="listing-product-image"
-          :src="result.image.asset.url"
+          :src="item.image.asset.url"
           alt="image"
         />
 
-        <h3>{{ result.name }}</h3>
+        <h3>{{ item.name }}</h3>
 
-        <p class="listing-product-text">{{ result.description }}</p>
+        <p class="listing-product-text">{{ item.description }}</p>
 
-        <p>{{ result.price }} €</p>
+        <p>{{ item.price }} €</p>
 
-        <button class="btn" @click="addProductToCart(result)">
+        <button class="btn" @click="addProductToCart(item)">
           Add to cart
         </button>
 
       </div>
 
-    </section>
+    </div>
 
     <Cart class="cart" :basket="cart" />
+
   </main>
 
   <Footer />
@@ -76,6 +78,7 @@
   };
 </script>
 <style>
+
   #tea {
     display: flex;
     margin-top: 2rem;
@@ -91,10 +94,6 @@
     
   }
 
-  .listing-product {
-    
-  
-  }
 
   .listing-product-image {
     width: 50%;
@@ -107,32 +106,32 @@
   }
 
   main h1 {
-    font-family: "Amaranth";
+    font-family: var(--font-family);
     font-weight: normal;
     font-size: 4rem;
   }
   main h2 {
-    font-family: "Amaranth";
+    font-family: var(--font-family);
     font-weight: normal;
     font-size: 2rem;
   }
 
   main h2 span {
-    background-color: white;
+    background-color: var(--color-white);
     padding: 10px;
   }
 
   main h3 {
-    font-family: "Amaranth";
+    font-family: var(--font-family);;
     font-weight: normal;
     font-size: 1.5rem;
-    color: #666;
+    color: var( --text-color);
     margin: 0;
   }
 
   .btn {
-    background-color: #b09067;
-    color: white;
+    background-color: var(--background-color-btn);
+    color: var(--color-white);
     text-transform: uppercase;
     letter-spacing: 2px;
     padding: 8px 15px;
@@ -145,13 +144,14 @@
   }
 
   .btn:hover {
-    background-color: turquoise;
-    color: white;
+    background-color: var(--background-color-hover);
+    color: var(--color-white);
   }
 
   
 
-  @media screen and (max-width: 550px) {
+  @media screen and (max-width: 600px) {
+
     #tea {
       flex-direction: column;
       margin: 1rem;
