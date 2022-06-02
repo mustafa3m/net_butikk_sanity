@@ -5,7 +5,7 @@
     "dataset": "production"
   },
   "project": {
-    "name": "template"
+    "name": "net_butikk"
   },
   "plugins": [
     "@sanity/base",
