@@ -3,8 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "description": "",
-  "main": "package.json",
-  "author": "Alejandro V. Rojas <a@alejandro.no>",
+  "main": "Mustafa Muse>",
   "license": "UNLICENSED",
   "scripts": {
     "start": "sanity start",

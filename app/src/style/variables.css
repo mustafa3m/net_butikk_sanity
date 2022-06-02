@@ -3,7 +3,10 @@
   --background-color: #96b011;
   --background-color-btn: B09067;
   --background-color-hover: turquoise;
-  /* Color */
+  --background : white;
+  
+  
+  /* Colors */
     --gray: #ddd;
     --color-white: white;
 
@@ -17,6 +20,6 @@
   /* Font-family */
   --font-family: "Amaranth", sans-serif;
 
-  
+  --font-size : 16px;
  
 }

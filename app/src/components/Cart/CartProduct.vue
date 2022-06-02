@@ -3,17 +3,14 @@
   <div class="productCart product">
 
     <strong >{{ product.product.name }} </strong>
-
     <span > Price {{ product.product.price }}</span>
-
     <span> quantity  {{ product.quantity }}</span>
-
     <button class=" product-margin product-button" @click="deleteProduct(product.product._id)" > * </button>
 
   </div>
   
 </template>
-;
+
 
 <script>
   import { computed } from "@vue/runtime-core";
