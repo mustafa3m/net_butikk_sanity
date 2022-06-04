@@ -9,6 +9,7 @@
 </template>
 
 <style scoped>
+
   footer {
     display: flex;
     flex-direction: row;
@@ -34,6 +35,7 @@
     footer {
      position: relative;
       width: 100vh;
+      
     }
   }
 </style>
