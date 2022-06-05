@@ -82,6 +82,7 @@
   #tea {
     display: flex;
     margin-top: 2rem;
+    width: 100%;
    
   }
 
@@ -92,6 +93,9 @@
     margin: 0 auto;
     position: relative;
     
+  }
+  .listing-product{ 
+     width: 100%;
   }
 
 
