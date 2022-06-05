@@ -155,6 +155,7 @@
     #tea {
       flex-direction: column;
       margin: 1rem;
+       width: 100%;
     }
     .listing-product {
       margin-top: 2rem;
