@@ -158,6 +158,7 @@
     }
     .listing-product {
       margin-top: 2rem;
+      width: 100%;
     }
 
     .listing-product h2 {
