@@ -5,7 +5,7 @@
     "dataset": "production"
   },
   "project": {
-    "name": "net_butikk"
+    "name": "net_butikk_sanity"
   },
   "plugins": [
     "@sanity/base",
@@ -15,9 +15,7 @@
   ],
   "env": {
     "development": {
-      "plugins": [
-        "@sanity/vision"
-      ]
+      "plugins": ["@sanity/vision"]
     }
   },
   "parts": [

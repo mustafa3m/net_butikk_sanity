@@ -171,6 +171,7 @@
     }
     .listing-product-text { 
       font-size: 1rem;
+      width: 100%;
     }
     .listing-product-title {
       font-size: 1rem;
