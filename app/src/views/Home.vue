@@ -14,13 +14,13 @@
           alt="image"
         />
 
-        <h3>{{ item.name }}</h3>
+        <h3 class="card__name">{{ item.name }}</h3>
 
         <p class="card__description">{{ item.description }}</p>
 
-        <p>{{ item.price }} €</p>
+        <p class="card__price">{{ item.price }} €</p>
 
-        <button class="btn" @click="addProductToCart(item)">Add to cart</button>
+        <button class="card__btn" @click="addProductToCart(item)">Add to cart</button>
       </div>
     </div>
 
@@ -102,12 +102,17 @@
     font-size: 2rem;
   }
 
+  .card__price{
+    width: 100%;
+
+  }
+
   .card__title span {
     background-color: var(--color-white);
     padding: 10px;
   }
 
-  .card__product h3 {
+  .card__name {
     font-family: var(--font-family);
     font-weight: normal;
     font-size: 1.5rem;
@@ -166,7 +171,7 @@
       margin-bottom: 2rem;
     }
 
-    .card__product h3 {
+    .card__name {
       font-size: 1.5rem;
     }
 
