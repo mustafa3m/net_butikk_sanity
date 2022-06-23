@@ -150,6 +150,8 @@
     }
     .listing-product-image {
       margin-bottom: 1rem;
+      max-width: 100%;
+      height: auto;
     }
     .listing-product-text {
       font-size: 1rem;
@@ -170,9 +172,6 @@
       width: 100vw;
     }
 
-    img {
-      max-width: 100%;
-      height: auto;
-    }
+    
   }
 </style>
