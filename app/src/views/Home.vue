@@ -150,7 +150,7 @@
     }
     .listing-product-image {
       margin-bottom: 1rem;
-      max-width: 100%;
+      width: 100%;
       height: auto;
     }
     .listing-product-text {
