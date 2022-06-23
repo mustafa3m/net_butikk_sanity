@@ -1,16 +1,12 @@
 <template>
-
   <Header />
 
   <main class="container">
-
     <div v-if="loading">...</div>
 
     <div id="tea" v-else>
-
       <div class="listing-product" v-for="item in result" :key="item._id">
-
-        <h2 class="listing-product-title">{{item.title }}</h2>
+        <h2 class="listing-product-title">{{ item.title }}</h2>
 
         <img
           class="listing-product-image"
@@ -24,20 +20,14 @@
 
         <p>{{ item.price }} €</p>
 
-        <button class="btn" @click="addProductToCart(item)">
-          Add to cart
-        </button>
-
+        <button class="btn" @click="addProductToCart(item)">Add to cart</button>
       </div>
-
     </div>
 
     <Cart class="cart" :basket="cart" />
-
   </main>
 
   <Footer />
-
 </template>
 
 <script>
@@ -78,11 +68,9 @@
   };
 </script>
 <style>
-
   #tea {
     display: flex;
     margin-top: 2rem;
-   
   }
 
   .container {
@@ -91,9 +79,7 @@
     max-width: 100%;
     margin: 0 auto;
     position: relative;
-    
   }
-
 
   .listing-product-image {
     width: 50%;
@@ -101,7 +87,7 @@
     height: auto;
   }
 
-  .listing-product-text{
+  .listing-product-text {
     font-size: 1.5rem;
   }
 
@@ -122,10 +108,10 @@
   }
 
   main h3 {
-    font-family: var(--font-family);;
+    font-family: var(--font-family);
     font-weight: normal;
     font-size: 1.5rem;
-    color: var( --text-color);
+    color: var(--text-color);
     margin: 0;
   }
 
@@ -140,7 +126,6 @@
     font-weight: 500;
     margin: 10px 0;
     text-align: center;
-    
   }
 
   .btn:hover {
@@ -148,14 +133,11 @@
     color: var(--color-white);
   }
 
-  
-
   @media screen and (max-width: 600px) {
-
     #tea {
       flex-direction: column;
       margin: 1rem;
-       width: 100%;
+      width: 100%;
     }
     .listing-product {
       margin-top: 2rem;
@@ -166,16 +148,15 @@
       font-size: 1.3rem;
       margin-bottom: 0.7rem;
     }
-    .listing-product-image{ 
-      margin-bottom : 1rem;
+    .listing-product-image {
+      margin-bottom: 1rem;
     }
-    .listing-product-text { 
+    .listing-product-text {
       font-size: 1rem;
       width: 100%;
     }
     .listing-product-title {
       font-size: 1rem;
-      
     }
     .btn {
       margin-bottom: 2rem;
@@ -183,12 +164,15 @@
 
     main h3 {
       font-size: 1.5rem;
-
     }
 
-    .container{
+    .container {
       width: 100vw;
-      
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
     }
   }
 </style>
